@@ -3,9 +3,6 @@
     "pages/welcome/welcome"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#b3d4db", //导航栏背景颜色
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#b3d4db"
   }
 }
