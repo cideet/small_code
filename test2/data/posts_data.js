@@ -2,56 +2,86 @@ var local_database = [
   {
     date: '2017-12-16',
     title: 'title',
-    post_img: '/images/img2.jpg',
+    imgSrc: '/images/img2.jpg',
+    avatar:'/images/img3.jpg',
     content: 'content',
-    view_num: '112',
-    collect_num: '88',
-    author_img: '/images/img2.jpg',postId:0
-  },
-  {
-    date: '2017-12-12',
-    title: 'title2',
-    post_img: '/images/img3.jpg',
-    content: 'content3',
-    view_num: '112',
-    collect_num: '88',
-    author_img: '/images/img3.jpg', postId: 1
+    reading: '112',
+    collection: '88',
+    headImgSrc: '/images/img2.jpg',
+    author: '张一丰',
+    dateTime: '24小时前',
+    detail: '这是文章的正文',
+    postId:0
   },
   {
     date: '2017-12-16',
     title: 'title',
-    post_img: '/images/img2.jpg',
+    imgSrc: '/images/img2.jpg',
+    avatar: '/images/img3.jpg',
     content: 'content',
-    view_num: '112',
-    collect_num: '88',
-    author_img: '/images/img2.jpg', postId: 2
-  },
-  {
-    date: '2017-12-12',
-    title: 'title2',
-    post_img: '/images/img3.jpg',
-    content: 'content3',
-    view_num: '112',
-    collect_num: '88',
-    author_img: '/images/img3.jpg', postId: 3
+    reading: '112',
+    collection: '88',
+    headImgSrc: '/images/img2.jpg',
+    author: '张一丰',
+    dateTime: '24小时前',
+    detail: '这是文章的正文',
+    postId: 1
   },
   {
     date: '2017-12-16',
     title: 'title',
-    post_img: '/images/img2.jpg',
+    imgSrc: '/images/img2.jpg',
+    avatar: '/images/img3.jpg',
     content: 'content',
-    view_num: '112',
-    collect_num: '88',
-    author_img: '/images/img2.jpg', postId: 4
+    reading: '112',
+    collection: '88',
+    headImgSrc: '/images/img2.jpg',
+    author: '张一丰',
+    dateTime: '24小时前',
+    detail: '这是文章的正文',
+    postId: 2
   },
   {
-    date: '2017-12-12',
-    title: 'title2',
-    post_img: '/images/img3.jpg',
-    content: 'content3',
-    view_num: '112',
-    collect_num: '88',
-    author_img: '/images/img3.jpg', postId: 5
+    date: '2017-12-16',
+    title: 'title',
+    imgSrc: '/images/img2.jpg',
+    avatar: '/images/img3.jpg',
+    content: 'content',
+    reading: '112',
+    collection: '88',
+    headImgSrc: '/images/img2.jpg',
+    author: '张一丰',
+    dateTime: '24小时前',
+    detail: '这是文章的正文',
+    postId: 3
+  },
+  {
+    date: '2017-12-16',
+    title: 'title',
+    imgSrc: '/images/img2.jpg',
+    avatar: '/images/img3.jpg',
+    content: 'content',
+    reading: '112',
+    collection: '88',
+    headImgSrc: '/images/img2.jpg',
+    author: '张一丰',
+    dateTime: '24小时前',
+    detail: '这是文章的正文',
+    postId: 4
+  },
+  {
+    date: '2017-12-16',
+    title: 'title',
+    imgSrc: '/images/img2.jpg',
+    avatar: '/images/img3.jpg',
+    content: 'content',
+    reading: '112',
+    collection: '88',
+    headImgSrc: '/images/img2.jpg',
+    author: '张一丰',
+    dateTime: '24小时前',
+    detail: '这是文章的正文',
+    postId: 5
   }
 ];
 
