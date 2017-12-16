@@ -1,7 +1,13 @@
 <view>
-  <swiper>
-    <swiper-item>content1</swiper-item>
-    <swiper-item>content2</swiper-item>
-    <swiper-item>content3</swiper-item>
+  <swiper style="width:100%; height:500rpx;">
+    <swiper-item>
+      <image src="/images/img1.jpg" style="width:100%; height:500rpx;"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/img1.jpg" style="width:100%;"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/img1.jpg" style="width:100%;"></image>
+    </swiper-item>
   </swiper>
 </view>
