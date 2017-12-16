@@ -4,6 +4,27 @@ Page({
 
   // 是否收藏
   onColletionTap: function (event) {
+    this.getPostsCollectedSyc();  //同步
+    // this.getPostsCollectedAsy();  //异步
+  },
+
+  // 是否收藏（异步）
+  getPostsCollectedAsy: function () {
+    var _this = this;
+    wx.getStorage({
+      key: 'posts_collected',
+      success: function (res) {
+        var postsCollected = res.data;
+        var postCollected = postsCollected[_this.data.currentPostid];
+        postCollected = !postCollected;
+        postsCollected[_this.data.currentPostid] = postCollected;
+        _this.showModel(postsCollected, postCollected);
+      },
+    })
+  },
+
+  // 是否收藏（同步）
+  getPostsCollectedSyc: function (event) {
     // var game = wx.getStorageSync('key11');  //获取同步缓存
     // wx.removeStorageSync('key11');  //删除同步缓存
     // wx.clearStorageSync();  //清除所有缓存
