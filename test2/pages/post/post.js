@@ -1,9 +1,13 @@
+var postsData = require('../../data/posts_data.js');  //只能用相对路径
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    // 小程序始终会读取data对象，用于数据绑定
+    // 在onLoad事件执行之后
     date: "Nov 18 2017"
   },
 
@@ -12,28 +16,8 @@ Page({
    */
   onLoad: function (options) {
     console.log('onLoad');
-    var post_content = [
-      {
-        date: '2017-12-16',
-        title: 'title',
-        post_img: '/images/img2.jpg',
-        content: 'content',
-        view_num: '112',
-        collect_num: '88',
-        author_img: '/images/img2.jpg'
-      },
-      {
-        date: '2017-12-12',
-        title: 'title2',
-        post_img: '/images/img3.jpg',
-        content: 'content3',
-        view_num: '112',
-        collect_num: '88',
-        author_img: '/images/img3.jpg'
-      }
-    ];
     this.setData({
-      post_content: post_content
+      post_content: postsData.postList
     });
   },
 
