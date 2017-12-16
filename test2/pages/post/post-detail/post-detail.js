@@ -2,6 +2,7 @@ var postsData = require('../../../data/posts_data.js');
 
 Page({
 
+  // 是否收藏
   onColletionTap: function (event) {
     // var game = wx.getStorageSync('key11');  //获取同步缓存
     // wx.removeStorageSync('key11');  //删除同步缓存
@@ -16,6 +17,7 @@ Page({
     // this.showToast(postsCollected, postCollected);
   },
 
+  // model弹出选择框
   showModel: function (postsCollected, postCollected) {
     var _this = this;
     wx.showModal({
@@ -37,7 +39,8 @@ Page({
     });
   },
 
-  showToast: function (postsCollected, postCollected){
+  // 自动消失的提示框
+  showToast: function (postsCollected, postCollected) {
     wx.setStorageSync('posts_collected', postsCollected);
     this.setData({
       collected: postCollected
@@ -49,8 +52,21 @@ Page({
     });
   },
 
+  // 分享和下拉选项（出现在底部）
   onShareTap: function (event) {
-
+    var itemList = ['分享给微信好友', '分享到朋友圈', '分享到QQ', '分享到微博'];
+    wx.showActionSheet({
+      itemList: itemList,
+      itemColor: "#405f80",
+      success: function (res) {
+        // res.cansel  取消
+        // res.tapInde  点了第几个确定按钮的索引
+        wx.showModal({
+          title: '用户分享到了' + itemList[res.tapIndex],
+          content: '用户是否取消？' + res.cancel + '现在无法实现分享功能'
+        })
+      }
+    })
   },
 
   /**
