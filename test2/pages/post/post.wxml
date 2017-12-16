@@ -30,7 +30,7 @@
       <image class="post-author " src="../../images/img3.jpg "></image>
       <text class="post-date ">Nov 24 2017</text>
     </view>
-    <text class="post-title ">文章标题</text>
+    <text class="post-title"  wx:if="{{false}}">文章标题</text>
     <image class="post-image " src="/images/img2.jpg "></image>
     <text class="post-content ">文章简介文章简介文章简介文，章简介文章简介文章简介文章简介文章，简介文章简介文章简介文章。简介文章简介文章简介文章简介。</text>
     <view class="post-like ">
