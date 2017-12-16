@@ -6,7 +6,7 @@ Page({
     var postid = event.currentTarget.dataset.postid;
     console.log(postid);
     wx.navigateTo({
-      url: 'post-detail/post-detail'
+      url: 'post-detail/post-detail?id=' + postid
     })
   },
 
