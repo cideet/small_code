@@ -2,6 +2,16 @@ var postsData = require('../../../data/posts_data.js');
 
 Page({
 
+  onCollectionTap: function (event) {
+    var game = wx.getStorageSync('key11');  //获取同步缓存
+    console.log(game);
+  },
+
+  onShareTap:function(event){
+    wx.removeStorageSync('key11');  //删除同步缓存
+    wx.clearStorageSync();  //清除所有缓存
+  },
+
   /**
    * 页面的初始数据
    */
@@ -18,7 +28,12 @@ Page({
     this.setData({
       postData: postData
     });
-    console.log(this.data.postData)
+    console.log(this.data.postData);
+    // wx.setStorageSync('key11', '张三丰丰');  //设置同步缓存
+    wx.setStorageSync('key11', {  //修改同步缓存
+      game: '撸呀撸',
+      developer: '暴雪'
+    });
   },
 
   /**

@@ -10,8 +10,8 @@
   <text class="title">{{postData.title}}</text>
   <view class="tool">
     <view class="circle-img">
-      <image src="/images/img2.jpg"></image>
-      <image class="share-img" src="/images/img1.jpg"></image>
+      <image catchtap="onCollectionTap" src="/images/img2.jpg"></image>
+      <image catchtap="onShareTap" class="share-img" src="/images/img1.jpg"></image>
     </view>
     <view class="horizon"></view>
   </view>

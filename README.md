@@ -18,5 +18,9 @@ zhuanlan.zhihu.com/oldtimes
 
 让设计师用750px做设计图
 
-
+wx.setStorageSync('key11', '张三丰');  //设置同步缓存
+wx.setStorageSync('key11', '张四丰');  //修改同步缓存
+wx.getStorageSync('key11');  //获取同步缓存
+wx.removeStorageSync('key11');  //删除同步缓存
+wx.clearStorageSync();  //清除所有缓存
 
