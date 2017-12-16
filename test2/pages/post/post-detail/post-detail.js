@@ -1,10 +1,12 @@
+var postsData = require('../../../data/posts_data.js');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    
+    postData:[]
   },
 
   /**
@@ -12,7 +14,14 @@ Page({
    */
   onLoad: function (options) {
     var postid = options.id;
-    console.log(postid);
+    // console.log(postid);
+    var postData = postsData.postList[postid];
+    // console.log(postData);
+
+    this.setData({
+      postData:postData
+    });
+    console.log(this.data.postData)
   },
 
   /**
