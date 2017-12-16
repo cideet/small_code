@@ -2,6 +2,10 @@ var postsData = require('../../data/posts_data.js');  //只能用相对路径
 
 Page({
 
+  onPostTap(){
+    console.log('111')
+  },
+
   /**
    * 页面的初始数据
    */
