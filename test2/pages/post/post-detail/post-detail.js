@@ -21,7 +21,17 @@ Page({
       title: postcollected ? '收藏成功' : '取消成功',
       duration: 1000,
       icon: 'success'  //或loading
-    })
+    });
+
+    // wx.showModal({
+    //   title: '收藏',
+    //   content: '是否收藏',
+    //   showCancel: 'true',
+    //   concelText: '不收藏',
+    //   cancelColor: '#333',
+    //   confirmText: '收藏',
+    //   confirmColor: 'red'
+    // });
   },
 
   onShareTap: function (event) {
