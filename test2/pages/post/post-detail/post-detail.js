@@ -9,29 +9,44 @@ Page({
     // console.log(game);
     console.log(1);
     var postsCollected = wx.getStorageSync('posts_collected');
-    var postcollected = postsCollected[this.data.currentPostid];
-    postcollected = !postcollected;
-    postsCollected[this.data.currentPostid] = postcollected;
+    var postCollected = postsCollected[this.data.currentPostid];
+    postCollected = !postCollected;
+    postsCollected[this.data.currentPostid] = postCollected;
+    this.showModel(postsCollected, postCollected);
+    // this.showToast(postsCollected, postCollected);
+  },
+
+  showModel: function (postsCollected, postCollected) {
+    var _this = this;
+    wx.showModal({
+      title: '收藏',
+      content: postCollected ? '收藏该文章？' : '取消收藏？',
+      showCancel: 'true',
+      concelText: '取消',
+      cancelColor: '#333',
+      confirmText: '确定',
+      confirmColor: 'red',
+      success: function (res) {
+        if (res.confirm) {
+          wx.setStorageSync('posts_collected', postsCollected);
+          _this.setData({
+            collected: postCollected
+          });
+        }
+      }
+    });
+  },
+
+  showToast: function (postsCollected, postCollected){
     wx.setStorageSync('posts_collected', postsCollected);
     this.setData({
-      collected: postcollected
+      collected: postCollected
     });
-    console.log(this.data.collected);
     wx.showToast({
-      title: postcollected ? '收藏成功' : '取消成功',
+      title: postCollected ? '收藏成功' : '取消成功',
       duration: 1000,
       icon: 'success'  //或loading
     });
-
-    // wx.showModal({
-    //   title: '收藏',
-    //   content: '是否收藏',
-    //   showCancel: 'true',
-    //   concelText: '不收藏',
-    //   cancelColor: '#333',
-    //   confirmText: '收藏',
-    //   confirmColor: 'red'
-    // });
   },
 
   onShareTap: function (event) {
