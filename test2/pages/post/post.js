@@ -4,7 +4,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    date:"Nov 18 2017"
+    date: "Nov 18 2017"
   },
 
   /**
@@ -12,6 +12,16 @@ Page({
    */
   onLoad: function (options) {
     console.log('onLoad');
+    var post_content1 = {
+      date: '2017-12-12',
+      title: 'title',
+      post_img: '/images/img2.jpg',
+      content: 'content',
+      view_num: '112',
+      collect_num: '88',
+      author_img: '/images/img3.jpg'
+    };
+    this.setData(post_content1);
   },
 
   /**
