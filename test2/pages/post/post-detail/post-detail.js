@@ -17,7 +17,11 @@ Page({
       collected: postcollected
     });
     console.log(this.data.collected);
-    
+    wx.showToast({
+      title: postcollected ? '收藏成功' : '取消成功',
+      duration: 1000,
+      icon: 'success'  //或loading
+    })
   },
 
   onShareTap: function (event) {
