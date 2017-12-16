@@ -1,7 +1,14 @@
 Page({
 
   onTap: function () {
-    console.log('123');
+    // 跳转带返回
+    // wx.navigateTo({
+    //   url: "../post/post"
+    // });
+
+    wx.redirectTo({
+      url: "../post/post"
+    });
   },
 
   /**
