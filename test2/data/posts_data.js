@@ -6,7 +6,7 @@ var local_database = [
     content: 'content',
     view_num: '112',
     collect_num: '88',
-    author_img: '/images/img2.jpg'
+    author_img: '/images/img2.jpg',postId:0
   },
   {
     date: '2017-12-12',
@@ -15,7 +15,7 @@ var local_database = [
     content: 'content3',
     view_num: '112',
     collect_num: '88',
-    author_img: '/images/img3.jpg'
+    author_img: '/images/img3.jpg', postId: 1
   },
   {
     date: '2017-12-16',
@@ -24,7 +24,7 @@ var local_database = [
     content: 'content',
     view_num: '112',
     collect_num: '88',
-    author_img: '/images/img2.jpg'
+    author_img: '/images/img2.jpg', postId: 2
   },
   {
     date: '2017-12-12',
@@ -33,7 +33,7 @@ var local_database = [
     content: 'content3',
     view_num: '112',
     collect_num: '88',
-    author_img: '/images/img3.jpg'
+    author_img: '/images/img3.jpg', postId: 3
   },
   {
     date: '2017-12-16',
@@ -42,7 +42,7 @@ var local_database = [
     content: 'content',
     view_num: '112',
     collect_num: '88',
-    author_img: '/images/img2.jpg'
+    author_img: '/images/img2.jpg', postId: 4
   },
   {
     date: '2017-12-12',
@@ -51,7 +51,7 @@ var local_database = [
     content: 'content3',
     view_num: '112',
     collect_num: '88',
-    author_img: '/images/img3.jpg'
+    author_img: '/images/img3.jpg', postId: 5
   }
 ];
 
