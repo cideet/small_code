@@ -1,9 +1,9 @@
 <import src="../stars/stars-template.wxml" />
 
 <template name="movieTemplate">
-  <view>
-    <image src="/images/vr.png"></image>
-    <text>血战钢锯林</text>
+  <view class="movieTemplate">
+    <image class="movie-img" src="/images/vr.png"></image>
+    <text class="movie-title">血战钢锯林</text>
     <template is="starsTemplate" />
   </view>
 </template>
