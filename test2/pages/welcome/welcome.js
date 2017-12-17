@@ -6,9 +6,9 @@ Page({
 
   onTap: function () {
     // 跳转带返回，最多5级，对应的是onHide
-    // wx.navigateTo({
-    //   url: "../post/post"
-    // });
+    wx.navigateTo({
+      url: "/pages/post/post"
+    });
 
     // 对应的是onUnload
     // wx.redirectTo({
@@ -16,12 +16,12 @@ Page({
     // });
 
     // 对应的完整写法
-    wx.navigateTo({
-      url: '../post/post',
-      success: function (res) { console.log('success'); },
-      fail: function () { console.log('fail'); },
-      complete: function () { console.log('complete'); }
-    });
+    // wx.navigateTo({
+    //   url: '../post/post',
+    //   // success: function (res) { console.log('success'); },
+    //   // fail: function () { console.log('fail'); },
+    //   // complete: function () { console.log('complete'); }
+    // });
 
     // wx.redirectTo({
     //   url: '../post/post',

@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/post/post",
     "pages/welcome/welcome",
+    "pages/post/post",
     "pages/post/post-detail/post-detail",
     "pages/movies/movies"
   ],
@@ -20,6 +20,12 @@
       {
         "pagePath": "pages/movies/movies",
         "text": "电影",
+        "iconPath": "/images/tab/dianying.png",
+        "selectedIconPath": "/images/tab/dianying_hl.png"
+      },
+      {
+        "pagePath": "pages/welcome/welcome",
+        "text": "欢迎",
         "iconPath": "/images/tab/dianying.png",
         "selectedIconPath": "/images/tab/dianying_hl.png"
       }
