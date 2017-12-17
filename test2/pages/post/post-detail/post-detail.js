@@ -40,19 +40,23 @@ Page({
       postsCollected[postid] = false;
       wx.setStorageSync('posts_collected', postsCollected);
     }
-
-    this.setAudioMonitor();  // 同步“页面”和“小程序”的音乐播放器播放状态
+    if (app.globalData.g_isPlayingMusic) {
+      this.setData({ isPlayingMusic: true });
+    }
+    this.setMusicMonitor();  // 同步“页面”和“小程序”的音乐播放器播放状态
 
   },
 
   // 同步“页面”和“小程序”的音乐播放器播放状态
-  setAudioMonitor: function () {
+  setMusicMonitor: function () {
     var _this = this;
     wx.onBackgroundAudioPlay(function () {
       _this.setData({ isPlayingMusic: true });
+      app.globalData.g_isPlayingMusic = true;
     })
     wx.onBackgroundAudioPause(function () {
       _this.setData({ isPlayingMusic: false });
+      app.globalData.g_isPlayingMusic = false;
     })
   },
 
