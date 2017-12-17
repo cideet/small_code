@@ -1,7 +1,8 @@
 
 App({
   globalData: {
-    g_isPlayingMusic: false
+    g_isPlayingMusic: false,  //音乐是否被播放
+    g_currentMusicPostid: null  //当前播放的音乐
   },
 
   /**

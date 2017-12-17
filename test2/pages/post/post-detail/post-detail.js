@@ -40,7 +40,7 @@ Page({
       postsCollected[postid] = false;
       wx.setStorageSync('posts_collected', postsCollected);
     }
-    if (app.globalData.g_isPlayingMusic) {
+    if (app.globalData.g_isPlayingMusic && app.globalData.g_currentMusicPostid == postid) {
       this.setData({ isPlayingMusic: true });
     }
     this.setMusicMonitor();  // 同步“页面”和“小程序”的音乐播放器播放状态
@@ -53,10 +53,12 @@ Page({
     wx.onBackgroundAudioPlay(function () {
       _this.setData({ isPlayingMusic: true });
       app.globalData.g_isPlayingMusic = true;
+      app.globalData.g_currentMusicPostid = _this.data.currentPostid;
     })
     wx.onBackgroundAudioPause(function () {
       _this.setData({ isPlayingMusic: false });
       app.globalData.g_isPlayingMusic = false;
+      app.globalData.g_currentMusicPostid = null;
     })
   },
 
