@@ -4,13 +4,13 @@
 <view>
   <swiper indicator-dots="true" autoplay="true" interval="3000" vertical="{{false}}" circular="true">
     <swiper-item>
-      <image src="/images/img3.jpg"></image>
+      <image catchtap="onSwiperItemTap" data-postid="1" src="/images/img3.jpg"></image>
     </swiper-item>
     <swiper-item>
-      <image src="/images/img2.jpg"></image>
+      <image catchtap="onSwiperItemTap" data-postid="2" src="/images/img2.jpg"></image>
     </swiper-item>
     <swiper-item>
-      <image src="/images/img1.jpg"></image>
+      <image catchtap="onSwiperItemTap" data-postid="3" src="/images/img1.jpg"></image>
     </swiper-item>
   </swiper>
   <block wx:for="{{post_content}}" wx:for-item="item" wx:for-index="index" wx:key="key">
