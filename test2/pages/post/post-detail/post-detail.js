@@ -147,6 +147,15 @@ Page({
       wx.setStorageSync('posts_collected', postsCollected);
     }
 
+    var _this = this;
+    // 监听音乐播放
+    wx.onBackgroundAudioPlay(function () {
+      _this.setData({ isPlayingMusic: true });
+    })
+    wx.onBackgroundAudioPause(function () {
+      _this.setData({ isPlayingMusic: false });
+    })
+
   },
 
   /**
