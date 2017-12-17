@@ -24,3 +24,6 @@ wx.getStorageSync('key11');  //获取同步缓存
 wx.removeStorageSync('key11');  //删除同步缓存
 wx.clearStorageSync();  //清除所有缓存
 
+
+event.target -> 当前点击的组件
+event.currentTarget -> 事件捕获的组件

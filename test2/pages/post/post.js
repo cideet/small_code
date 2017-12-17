@@ -10,12 +10,22 @@ Page({
     })
   },
 
-  onSwiperItemTap: function (event) {
-    var postid = event.currentTarget.dataset.postid;
+  // onSwiperItemTap: function (event) {
+  //   var postid = event.currentTarget.dataset.postid;
+  //   console.log(postid);
+  //   wx.navigateTo({
+  //     url: 'post-detail/post-detail?id=' + postid
+  //   })
+  // },
+
+  onSwiperTap: function (event) {
+    var postid = event.target.dataset.postid;
+    // event.target -> 当前点击的组件
+    // event.currentTarget -> 事件捕获的组件
     console.log(postid);
     wx.navigateTo({
       url: 'post-detail/post-detail?id=' + postid
-    })
+    });
   },
 
   /**
