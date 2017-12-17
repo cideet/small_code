@@ -1,6 +1,6 @@
 Page({
 
-  onTextTap(){
+  onTextTap() {
     console.log('onText');
   },
 
@@ -16,19 +16,19 @@ Page({
     // });
 
     // 对应的完整写法
-    // wx.navigateTo({
-    //   url: '../post/post',
-    //   success: function (res) { console.log('success'); },
-    //   fail: function () { console.log('fail'); },
-    //   complete: function () { console.log('complete'); }
-    // });
-
-    wx.redirectTo({
+    wx.navigateTo({
       url: '../post/post',
       success: function (res) { console.log('success'); },
       fail: function () { console.log('fail'); },
       complete: function () { console.log('complete'); }
     });
+
+    // wx.redirectTo({
+    //   url: '../post/post',
+    //   success: function (res) { console.log('success'); },
+    //   fail: function () { console.log('fail'); },
+    //   complete: function () { console.log('complete'); }
+    // });
 
   },
 
