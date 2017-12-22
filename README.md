@@ -27,3 +27,27 @@ wx.clearStorageSync();  //清除所有缓存
 
 event.target -> 当前点击的组件
 event.currentTarget -> 事件捕获的组件
+
+restful API:
+豆瓣API
+微博API
+github API 
+
+wx.request({
+  url: url,
+  method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+  header: {
+    "Content-Type": "application/json11"
+  },
+  success: function (res) {
+    that.processDoubanData(res.data, settedKey, categoryTitle)
+  },
+  fail: function (error) {
+    // fail，比如断网
+    console.log(error)
+  },
+  complete:function(){
+    console.log('始终执行');
+  }
+})
+
